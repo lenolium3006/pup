@@ -36,7 +36,7 @@ def test_calculate_normal():
     assert calculate(1, 1000, epsilon=0.001) == 0.001
 
 
-def test_calculate_divide_by_zero():
+def test_calculate_divide_zero():
     with pytest.raises(ZeroDivisionError):
         calculate(1, 0)
 
