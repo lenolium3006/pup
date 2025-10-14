@@ -16,10 +16,6 @@ def load_params(filename="settings.ini"):
                 f.close()
                 return float(parts[1])
         f.close()
-    except FileNotFoundError:
-        print("Файл не найден")
-        return None
-    return 0.0001
 
 
 class TestAll(unittest.TestCase):
