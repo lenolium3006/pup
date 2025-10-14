@@ -29,7 +29,6 @@ class TestAll(unittest.TestCase):
         self.assertIsNone(calculate(1, 0))
 
     def test_load_value(self):
-        # создадим временный файл для теста
         with open("settings.ini", "w") as f:
             f.write("epsilon = 0.001\n")
         e = load_params("settings.ini")
