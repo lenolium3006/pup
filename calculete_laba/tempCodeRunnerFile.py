@@ -1,8 +1,3 @@
-import unittest
-import configparser
-from calc import calculate
-
-
 class TestCalculate(unittest.TestCase):
 
     def test_half(self):
@@ -22,7 +17,3 @@ class TestCalculate(unittest.TestCase):
     def test_wrong_format(self):
         with self.assertRaises(ValueError):
             float("abc")
-
-
-if __name__ == "__main__":
-    unittest.main()

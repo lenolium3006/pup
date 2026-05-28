@@ -18,21 +18,29 @@ while True:
     print(el)
     if el > 10:
         break
-    
+        
+ 
+       
+
 def my_genn():
     """Сопрограмма"""
 
     while True:
         number_of_fib_elem = yield
-        print(number_of_fib_elem)
-        number_of_fib_elem = yield
-        a = 0
-        b = 1
+
+        # базовые случаи
+        if number_of_fib_elem is None or number_of_fib_elem <= 0:
+            yield []
+            continue
+
+        # генерация Фибоначчи
         l = []
-        for i in range(number_of_fib_elem):
+        a, b = 0, 1
+
+        for _ in range(number_of_fib_elem):
             l.append(a)
             a, b = b, a + b
-        l = [str(number_of_fib_elem)+":", 0, 1, 1] # example data
+
         yield l
 
 def fib_coroutine(g):
